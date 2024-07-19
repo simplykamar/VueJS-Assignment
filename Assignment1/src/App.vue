@@ -1,7 +1,12 @@
 <script setup>
-    import Test from './components/Test.vue'
+    import Button from './components/Button.vue'
+
+    function childEventHandler(params) {
+        console.log("clicked")
+        alert("clicked")
+    }
 </script>
 
 <template>
-    <Test/>
+    <Button v-on:custome-event="childEventHandler"  backgroundColor="black" color:="white" text="It is dark" />
 </template>
